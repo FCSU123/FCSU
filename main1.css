@@ -1,0 +1,105 @@
+
+html, body {
+	height: 100%
+}
+
+#containermain{
+	min-height: 93.65%
+}
+
+#main {
+	overflow: auto;
+	padding-bottom: 100px;
+}
+
+h2 {
+	color: 5b9bd5;
+	padding: 15px 15px 10px 28px;
+}
+
+#lgbtq span:nth-child(6n + 1) {
+  color: #FF0018
+}
+
+#lgbtq span:nth-child(6n + 2) {
+  color: #FFA52C
+}
+
+#lgbtq span:nth-child(6n + 3) {
+  color: #FFCC00
+}
+
+#lgbtq span:nth-child(6n + 4) {
+  color: #008018
+}
+
+#lgbtq span:nth-child(6n + 5) {
+  color: #0000F9
+}
+
+#lgbtq span:nth-child(6n + 6) {
+  color: #86007D
+}
+
+#awarenessheading {
+	color: 5b9bd5;
+	padding: 10px 15px 10px 15px;
+}
+
+#sugestionsheading {
+	color: 5b9bd5;
+	padding: 9.5px 15px 10px 15px;
+}
+
+h4 {
+	color: 5b9bd5;
+	padding: 10px 15px 10px 15px;
+}
+
+#aboutus {
+	padding: 0 15px 15px 15px;
+}
+
+#top {
+	padding: 15px;
+}
+
+#box {
+	border-style: solid;
+	border-width: 2px;
+	border-color: ffc000;
+}
+
+#eventbox {
+	border-style: solid;
+	border-width: 2px;
+	border-color: ffc000;
+	min-height: 210px
+}
+
+#charity {
+	padding: 6px 12px;
+	background-color: 5b9bd5;
+	border-radius: 10px;
+	border-color: 5b9bd5;
+	color: white;
+	text-shadow: 0px;
+}
+
+#fcsuimage {
+	padding: 0 15px 15px 15px;
+	width: 70%;
+}
+
+#carousel {
+	padding: 15px 15px;
+}
+
+#footer{
+	 background-color: #212529;
+	 position: relative;
+	 height: 60px;
+	 margin-top: -60px;
+	 clear: both;
+	 text-align: center;
+}
