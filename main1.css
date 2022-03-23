@@ -103,3 +103,37 @@ h4 {
 	 clear: both;
 	 text-align: center;
 }
+
+input{
+  border-color: 5b9bd5;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-shadow: 0px;
+  border-style: solid;
+  border-width: 2px;
+  outline: red;
+}
+
+#sub{
+  color: white;
+  border-color: 5b9bd5;
+  background-color: 5b9bd5;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-shadow: 0px;
+}
+
+#formbox{
+	margin: 15px 25px;
+}
+
+#boxform {
+	margin: 10px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: ffc000;
+}
