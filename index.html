@@ -140,6 +140,35 @@
 			<p>We also have a suggestions box in the Student Union area at the Channelside Campus.</p>
 			</div>
 			</div>
+				
+			<div class="darkBG col-xl-6">
+			<div id="boxform">
+				
+				<h2> Contact Us </h2>
+				
+				<form name="submit-to-google-sheet">
+				
+				<div id="formbox">
+				<input name="name" type="name" placeholder="Name" >
+				</div>
+				
+				<div id="formbox">
+				<input name="email" type="email" placeholder="Email" >
+				</div>
+				
+				<div id="formbox">
+				<input id="notes" name="notes" type="notes" placeholder="Description" >
+				</div>
+				
+				<div id="formbox">
+				<button id="sub" type="submit">Submit</button>
+				</div>
+				
+				</form>
+			</div>
+
+				
+			</div>
 			
 			</div>
 			</div>
@@ -149,6 +178,18 @@
 			
 			</div>
 		</div>
+	
+				<script>
+				const scriptURL = 'https://script.google.com/macros/s/AKfycbwt2AWqHtyhmM8XS9lWQ36fvlqTh0qDbuHGIkXWyeiASCDg47s/exec'
+				const form = document.forms['submit-to-google-sheet']
+
+				form.addEventListener('submit', e => {
+					e.preventDefault()
+					fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+					.then(response => console.log('Success!', response))
+					.catch(error => console.error('Error!', error.message))
+				})
+				</script>
 		
 		</body>
 	
