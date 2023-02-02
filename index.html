@@ -173,27 +173,19 @@
 				
 				<h2> Contact Us </h2>
 				
-				<form name="submit-to-google-sheet">
-				
-				<div id="formbox">
-				<input name="name" type="name" placeholder="Name" >
-				</div>
-				
-				<div id="formbox">
-				<input name="email" type="email" placeholder="Email" >
-				</div>
-				
-				<div id="formbox">
-				<textarea id="notes" name="notes" type="notes" placeholder="Description" rows="5" ></textarea>
-				</div>
-				
-				<div id="formbox">
-				<button id="sub" type="submit">Submit</button>
-				</div>
-				
-				</form>
-				</div>
-
+				<form action="mailto:40022979@student.furness.ac.uk"
+method="POST"
+enctype="multipart/form-data"
+name="EmailForm">
+    Name:<br>
+    <input type="text" size="19" name="Contact-Name"><br><br>
+    Email:<br>
+    <input type="email" name="Contact-Email"><br><br> 
+    Message:<br> 
+    <textarea name="Contact-Message" rows="6″ cols="20″>
+    </textarea><br><br> 
+    <button type="submit" value="Submit">Send</button>
+</form>  
 				
 			</div>
 			
@@ -206,17 +198,7 @@
 			</div>
 		</div>
 		
-		<script>
-				const scriptURL = 'https://script.google.com/macros/s/AKfycbwt2AWqHtyhmM8XS9lWQ36fvlqTh0qDbuHGIkXWyeiASCDg47s/exec'
-				const form = document.forms['submit-to-google-sheet']
-
-				form.addEventListener('submit', e => {
-					e.preventDefault()
-					fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-					.then(response => console.log('Success!', location.href = "http://www.fcsu.co.uk/"))
-					.catch(error => console.error('Error!', error.message))
-				})
-				</script>
+	
 		
 		</body>
 	
