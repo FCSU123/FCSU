@@ -197,19 +197,25 @@
 
 
 
-	<script>
-				const scriptURL = 'https://script.google.com/macros/s/AKfycbwt2AWqHtyhmM8XS9lWQ36fvlqTh0qDbuHGIkXWyeiASCDg47s/exec'
-				const form = document.forms['submit-to-google-sheet']
+	            <script>
+                const form = document.forms['submit-to-google-sheet']
 
 				form.addEventListener('submit', e => {
 					e.preventDefault()
-					fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-					.then(response => console.log('Success!', location.href = "http://www.fcsu.co.uk/"))
+
+					var templateParams = {
+                        name: form.elements["name"].value,
+                        notes: form.elements["notes"].value,
+                        email: form.elements["email"].value
+                    };
+
+                    emailjs.send('service_i6lgihk', 'template_xea177s', templateParams)
+                    .then(response => console.log('Success!', location.href = "http://www.fcsu.co.uk/"))
 					.catch(error => console.error('Error!', error.message))
 				})
 				</script>
 		
-		</body>
+		    </body>
 
 				
 
@@ -236,5 +242,15 @@
 		</footer>
 	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> <!script makes website responsive>
+    
+    <!Scripts for sending contact email>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("mgfhD53may_76fU5q");
+        })();
+    </script>
 	</body>
 </html>
